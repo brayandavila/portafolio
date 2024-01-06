@@ -1,6 +1,8 @@
 ---
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import Angular from "./icons/Angular.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
 
 const TAGS = {
   NEXT: {
@@ -13,26 +15,34 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#0F0F11] text-white",
+    icon: Angular,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap CSS",
+    class: "bg-[#563d7c] text-white",
+    icon: Bootstrap,
+  },
 };
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "bdTMDB - Una biblioteca de películas",
     description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Creado con Angular y Bootstrap. Es una biblioteca de películas que se alimenta de la API de TMDB.",
+    link: "https://storied-seahorse-77c430.netlify.app/movies?pag=1&section=popular",
+    github: "https://github.com/brayandavila/bdTMDB",
+    image: "/projects/bdmdb.webp",
+    tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP],
   },
 ];
 ---
 
-<!-- {
+{
   PROJECTS.map(({ image, title, description, tags }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
-        {title}
-      </h3>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
@@ -54,4 +64,4 @@ const PROJECTS = [
       />
     </article>
   ))
-} -->
+}
