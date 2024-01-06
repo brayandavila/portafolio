@@ -1,0 +1,100 @@
+---
+import Angular from "./icons/Angular.astro";
+import BootstrapColor from "./icons/BootstrapColor.astro";
+import C from "./icons/C.astro";
+import Git from "./icons/Git.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Laravel from "./icons/Laravel.astro";
+import MySql from "./icons/MySql.astro";
+import Python from "./icons/Python.astro";
+import TypeScript from "./icons/TypeScript.astro";
+---
+
+<h3 class="text-lg font-semibold text-yellow-200 mt-2">Habilidades 🛠️</h3>
+<div class="slider mt-8">
+    <div class="slide-track">
+        <div class="slide">
+            <Git class="size-28" />
+        </div>
+        <div class="slide">
+            <JavaScript class="size-28" />
+        </div>
+        <div class="slide">
+            <Angular class="size-28" />
+        </div>
+        <div class="slide">
+            <Laravel class="size-28" />
+        </div>
+        <div class="slide">
+            <Python class="size-28" />
+        </div>
+        <div class="slide">
+            <MySql class="size-28" />
+        </div>
+        <div class="slide">
+            <C class="size-28" />
+        </div>
+        <div class="slide">
+            <BootstrapColor class="size-28" />
+        </div>
+        <div class="slide">
+            <TypeScript class="size-28" />
+        </div>
+        <div class="slide">
+            <Git class="size-28" />
+        </div>
+        <div class="slide">
+            <JavaScript class="size-28" />
+        </div>
+        <div class="slide">
+            <Angular class="size-28" />
+        </div>
+        <div class="slide">
+            <Laravel class="size-28" />
+        </div>
+        <div class="slide">
+            <Python class="size-28" />
+        </div>
+        <div class="slide">
+            <MySql class="size-28" />
+        </div>
+        <div class="slide">
+            <C class="size-28" />
+        </div>
+        <div class="slide">
+            <BootstrapColor class="size-28" />
+        </div>
+        <div class="slide">
+            <TypeScript class="size-28" />
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-112px * 9));
+        }
+    }
+
+    .slider {
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: auto;
+
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(100px * 18);
+        }
+        .slide {
+            height: 100px;
+            width: 112px;
+            margin: 15px;
+        }
+    }
+</style>
