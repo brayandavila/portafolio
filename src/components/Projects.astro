@@ -31,7 +31,7 @@ const PROJECTS = [
     title: "bdTMDB - Una biblioteca de películas",
     description:
       "Creado con Angular y Bootstrap. Es una biblioteca de películas que se alimenta de la API de TMDB.",
-    link: "https://storied-seahorse-77c430.netlify.app/movies?pag=1&section=popular",
+    link: "https://storied-seahorse-77c430.netlify.app",
     github: "https://github.com/brayandavila/bdTMDB",
     image: "/projects/bdmdb.webp",
     tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP],
@@ -40,9 +40,11 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags }) => (
+  PROJECTS.map(({ image, title, description, tags, link }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      </a>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
@@ -56,12 +58,14 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video hover:scale-95 transition hover:bg-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+      </a>
     </article>
   ))
 }
