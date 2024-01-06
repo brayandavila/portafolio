@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Marzo 2022 - Actualmente",
+    title: "Desarrollador FullStack − Innovating",
+    description:
+      "Líder técnico y de desarrollo, encargado del desarrollo de software a medida para diversas áreas empresariales. Dirigí la implementación de soluciones utilizando Laravel para la gestión de la API, consumida desde el frontend en Angular. Mi rol incluía la definición de requerimientos, planificación, asignación de tareas y aseguramiento de la calidad del código",
+  },
+  {
+    date: "Enero 2019 - Marzo 2022",
+    title: "Freelance  − Soporte de hardware y software",
+    description:
+      "Mantenimiento de equipos. Creación y gestión de bases de datos. Configuración y mantenimiento de equipos",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
